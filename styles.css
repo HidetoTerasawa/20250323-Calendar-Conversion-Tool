@@ -1,0 +1,178 @@
+#japaneseYearInput {
+  width: 100px; /* 固定幅を設定 */
+  box-sizing: border-box; /* パディングとボーダーを含めて幅を計算 */
+}
+
+#to-japanese-era,
+#to-gregorian {
+  width: 100px; /* 固定幅を設定 */
+  box-sizing: border-box; /* パディングとボーダーを含めて幅を計算 */
+}
+
+#gregorian-input,
+#to-japanese-era {
+  height: 30px; /* 高さを統一 */
+  padding: 0px; /* パディングを統一 */
+  margin: 0; /* マージンをリセット */
+  box-sizing: border-box; /* パディングとボーダーを含めて幅を計算 */
+  width: 100px; /* 固定幅を設定 */
+}
+
+#japaneseYearInput,
+#to-gregorian {
+  height: 30px; /* 高さを統一 */
+  padding: 0px; /* パディングを統一 */
+  margin: 0; /* マージンをリセット */
+  box-sizing: border-box; /* パディングとボーダーを含めて幅を計算 */
+}
+
+body {
+  background: linear-gradient(45deg, #4a90e2, #1c3b70); /* 色を落ち着かせる */
+  color: #f0f0f0; /* テキスト色を変更 */
+  font-family: "Arial", sans-serif; /* フォントを変更 */
+}
+
+h1,
+h2 {
+  text-shadow: 1px 1px #333; /* テキストシャドウを微調整 */
+}
+
+h2 {
+  border-top: 1px solid #f0f0f0; /* 上罫線を追加 */
+  border-bottom: 1px solid #f0f0f0; /* 下罫線を追加 */
+  padding-top: 10px; /* 上パディングを追加 */
+  padding-bottom: 10px; /* 下パディングを追加 */
+  text-align: center;
+}
+
+.container,
+.container2 {
+  border: 3px solid #f0f0f0; /* ボーダーを変更 */
+  padding: 20px;
+  margin: 20px auto; /* 自動で左右中央揃え */
+  background: rgba(0, 0, 0, 0.7); /* 背景色を微調整 */
+  width: 600px; /* 幅を固定 */
+}
+
+button {
+  background: #4a90e2; /* ボタン色を変更 */
+  border: 2px solid #f0f0f0;
+  color: #f0f0f0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s; /* 背景色のトランジションを追加 */
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #357ab7; /* ホバー時の色を変更 */
+}
+
+select,
+input[type="number"] {
+  background: #1c3b70; /* 入力フィールドの背景色を変更 */
+  border: 2px solid #f0f0f0;
+  color: #f0f0f0;
+  padding: 5px;
+}
+
+a {
+  color: #4a90e2; /* リンク色を変更 */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #333; /* フッターの背景色を変更 */
+  padding: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: #4a90e2; /* フッター内のリンク色を変更 */
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #f0f0f0;
+  z-index: 1000;
+  display: none;
+}
+
+#japaneseYearInput::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* 色を薄い白に変更 */
+}
+
+.popup button {
+  background: #4a90e2;
+  border: 2px solid #f0f0f0;
+  color: #f0f0f0;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center; /* 中央に配置 */
+  font-size: 2.5em; /* フォントサイズを大きく */
+  color: #eec7c7; /* テキストカラー */
+  margin-top: 20px; /* 上部マージン */
+  font-weight: bold; /* 太字 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* テキストシャドウ */
+}
+
+#gregorian-output {
+  content: attr(data-era) "年" attr(data-year) "は西暦" attr(data-gregorian)
+    "年です。";
+}
+
+@media (max-width: 600px) {
+  .container,
+  .container2 {
+    width: 90%; /* 幅を90%に設定 */
+    padding: 10px; /* パディングを調整 */
+  }
+  input[type="number"] {
+    font-size: 16px; /* 16px以上に設定することでズームを防ぐ */
+  }
+
+  h1 {
+    font-size: 2em; /* フォントサイズを調整 */
+    margin-top: 10px; /* 上部マージンを調整 */
+  }
+
+  h2 {
+    font-size: 1.5em; /* フォントサイズを調整 */
+    padding-top: 5px; /* 上パディングを調整 */
+    padding-bottom: 5px; /* 下パディングを調整 */
+  }
+
+  button {
+    width: 100%; /* ボタン幅を100%に設定 */
+    padding: 10px; /* パディングを調整 */
+  }
+
+  input[type="number"],
+  select {
+    width: 100%; /* 入力フィールドの幅を100%に設定 */
+    padding: 10px; /* パディングを調整 */
+  }
+
+  #japaneseYearInput,
+  #to-gregorian,
+  #gregorian-input,
+  #to-japanese-era {
+    width: 100%; /* 幅を100%に設定 */
+    height: 40px; /* 高さを調整 */
+  }
+}
